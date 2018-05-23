@@ -8,5 +8,7 @@ namespace ConsoleApplication4
 {
     class Robo
     {
+        public int X
+        public int Y;
     }
 }
