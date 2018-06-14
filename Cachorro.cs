@@ -8,13 +8,13 @@ namespace ConsoleApplication1
 {
     class Cachorro
     {
-        public string dono;
-        public string nome;
-        public string raça;
-        public string brinquedo;
-        public char sexo;
-        public double peso;
-        public bool pedigree;
+        public string Dono;
+        public string Nome;
+        public string Raça;
+        public string Brinquedo;
+        public char Sexo;
+        public double Peso;
+        public bool Pedigree;
 
     }
 }
