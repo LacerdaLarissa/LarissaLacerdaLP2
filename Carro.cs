@@ -36,7 +36,7 @@ namespace ConsoleApplication4
             ClassificPot="Potente";
             
             Console.WriteLine("{0}", Resultado);
-            return Classificar;
+            return Resultado;
           }
         
         }
