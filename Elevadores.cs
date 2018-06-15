@@ -14,39 +14,32 @@ namespace ConsoleApplication2
         public int Capacidade;
         public int PessoasPresentes;
         
-        //if(Cacidade<PessoasPresentes)
+        //if(Capacidade<PessoasPresentes)
         //C.W("Sai");
         
-        //else if(Capacidade>PessoasPresentes)
-        //C.W("Entra");
 
-
-        public string Entra( int X )
+        public void Entra( int X )
         {
-            int X= Capacidade-PessoasPresentes;
-            return int X;
+            if (Capacidade>PessoasPresentes+X);
         }
         
-        public string Sai( int Y )
+        public void Sai( int X )
         {
-            int Y= PessoasPresentes-Capacidade;
-            return int Y;
+            if (PessoasPresentes+X>Capacidade);
         }
         
-        public string Vai ( )
+        public void Vai ( )
         {
-            //subir= AndarDeejado-AndarAtual;
+            //subir= AndarDesejado-AndarAtual;
             //descer= AndarAtual-AndarDesejado;
-            return Vai;
         }
         
-        public string Emergencia( )
+        public void Emergencia( )
         {
             Console.Write("Ligue para o Corpo de Bombeiros (193)");
-            Console.Beep;
-            Console.Beep;
-            Console.Beep;
-            return Emergencia;
+            Console.Beep();
+            Console.Beep();
+            Console.Beep();
         }
     }
 }
