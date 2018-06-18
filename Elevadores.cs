@@ -10,7 +10,6 @@ namespace ConsoleApplication2
     {
         public int AndarAtual;
         public int TotalAndares;
-        public int AndarDesejado;
         public int Capacidade;
         public int PessoasPresentes;
         
@@ -28,8 +27,10 @@ namespace ConsoleApplication2
             if (PessoasPresentes+X>Capacidade);
         }
         
-        public void Vai ( )
-        {
+        public void Vai ( int AndarDesejado )
+        {   
+            
+            if (AndarDesejado>=0 && AndarDesejaod<=TotalAndares)
             //subir= AndarDesejado-AndarAtual;
             //descer= AndarAtual-AndarDesejado;
         }
