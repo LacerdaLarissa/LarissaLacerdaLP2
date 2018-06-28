@@ -19,25 +19,28 @@ namespace ConsoleApplication2
 
         public void Entra( int X )
         {
-            if (Capacidade>PessoasPresentes+X);
+            if (Capacidade>=PessoasPresentes+X);
+            PessoasPresentes= PessoasPresentes + X;
         }
         
         public void Sai( int X )
         {
-            if (PessoasPresentes+X>Capacidade);
+            if (PessoasPresentes+X>=Capacidade);
+            PessoasPresentes= PessoasPresentes - X;
         }
         
         public void Vai ( int AndarDesejado )
         {   
             
-            if (AndarDesejado>=0 && AndarDesejaod<=TotalAndares)
+            if (AndarDesejado>=0 && AndarDesejado<=TotalAndares)
             //subir= AndarDesejado-AndarAtual;
             //descer= AndarAtual-AndarDesejado;
+            AndarAtual= AndarDesejado;
         }
         
         public void Emergencia( )
         {
-            Console.Write("Ligue para o Corpo de Bombeiros (193)");
+            Console.Write("Ligando para o Corpo de Bombeiros (193)");
             Console.Beep();
             Console.Beep();
             Console.Beep();
