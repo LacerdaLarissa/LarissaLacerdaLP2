@@ -23,7 +23,7 @@ namespace ConsoleApplication4
           {
             Modelo[i]=Console.ReadLine();
             KmRodado [i]= double.Parse(C.RL());
-            Potencia [i]= double.Parse(C.RL
+            Potencia [i]= double.Parse(C.RL());
             if(KmRodado[i]<=5000)
 +           ClassificTemp="Novo";
 +          
