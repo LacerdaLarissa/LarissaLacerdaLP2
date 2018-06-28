@@ -1,4 +1,16 @@
-int n = int.Parse(Console.ReadLine());
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    class Veiculo
+    {
+        static void Main(string[] args)
+        {   
+            int n = int.Parse(Console.ReadLine());
             string modelo;
             double km;
             double pot;
@@ -36,3 +48,6 @@ int n = int.Parse(Console.ReadLine());
                 }
                 Console.WriteLine("{0}-{1}-{2}\n", modelo, classVeic, classPot);
             }
+         }
+    }
+}
