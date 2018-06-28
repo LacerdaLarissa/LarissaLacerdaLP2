@@ -48,6 +48,6 @@ namespace ConsoleApplication4
                 }
                 Console.WriteLine("{0}-{1}-{2}\n", modelo, classVeic, classPot);
             }
-         }
+        }
     }
 }
