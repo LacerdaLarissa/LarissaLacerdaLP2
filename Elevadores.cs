@@ -16,7 +16,6 @@ namespace ConsoleApplication2
         //if(Capacidade<PessoasPresentes)
         //C.W("Sai");
         
-
         public void Entra( int X )
         {
             if (Capacidade>=PessoasPresentes+X);
