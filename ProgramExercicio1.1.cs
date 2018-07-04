@@ -6,36 +6,36 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication4
 {
-    class Program
+    class Veiculo
     {
         static void Main(string[] args)
         {
-          string Modelo, Resultado, ClassificTenp, ClassificPot;
-          double KmRodado, Potencia;
+          string modelo, ClassVeic= "", ClassPot= "";
+          double km, pot;
           
-          Modelo=C.RL();
-          KmRodado= double.Parse(C.RL());
-          Potencia=double.Parse(C.RL());
+          modelo=C.RL();
+          km = double.Parse(C.RL());
+          pot = double.Parse(C.RL());
           
-          if(KmRodado>=5000)
-          ClassificTemp="Novo";
+          if (km <= 5000)
+          ClassVeic="Novo";
           
-          else if (KmRodado<5000 && KmRodado<=25000)
-          ClassificTemp="Seminovo";
+          else if (km > 5000 && km <= 25000)
+          ClassVeic="Seminovo";
           
-          else //(KmRodado>25000)
-          ClassificTemp="Velho";
+          else //(km > 25000)
+          ClassVeic="Velho";
           
-          if (Potencia<80)
-          ClassificPot="Popular";
+          if (pot < 80)
+          ClassPot="Popular";
           
-          else if(Potencia>=80 && Potencia<170)
-          ClassificPot"Médio";
+          else if(pot >= 80 && pot < 170)
+          ClassPot="Médio";
           
-          else
-          ClassificPot="Potente";
+          else//km > 170
+          ClassPot="Potente";
           
-          Console.WriteLine("{0} - {1} - {2}", Modelo, ClassificTemp, ClassificPot);
+          Console.WriteLine("{0} - {1} - {2}", modelo, ClassVeic, ClassPot);
         
         }
     }
