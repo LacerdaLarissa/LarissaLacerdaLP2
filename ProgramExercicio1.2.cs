@@ -35,7 +35,7 @@ namespace ConsoleApplication4
                 else if(pot >= 80 && pot < 170)
                 ClassPot="Médio";
                 
-                else//km > 170
+                else//pot > 170
                 ClassPot="Potente";
           
                 
