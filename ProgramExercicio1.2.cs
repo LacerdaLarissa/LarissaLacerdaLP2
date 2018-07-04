@@ -39,7 +39,7 @@ namespace ConsoleApplication4
                 ClassPot="Potente";
           
                 
-                Console.WriteLine("{0}-{1}-{2}\n", modelo, ClassVeic, ClassPot);
+                Console.WriteLine("{0} - {1} - {2}", modelo, ClassVeic, ClassPot);
             }
         }
     }
