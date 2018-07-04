@@ -44,7 +44,7 @@ namespace ConsoleApplication4
 +           ClassPot="Potente";
           }
         
-            Console.writeLine("{0 }- {1} - {2}",Modelo[i], ClassVeic, ClasscPot);
+            Console.writeLine("{0 }- {1} - {2}", modelo[i], ClassVeic, ClasscPot);
         }
     }
 }
