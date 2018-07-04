@@ -18,10 +18,10 @@ namespace ConsoleApplication4
                 modelo= C.RL();
                 km = double.Parse(C.RL());
                 pot = double.Parse(C.RL());
-                C.WL(Classificar(car));
+                C.WL(Classificar(modelo, km, pot));
              }
         }
-        static string Classificar(Carro c)
+        static string Classificar(string modelo, double km, double pot)
         {
             string ClassVeic;
             string ClassPot;
