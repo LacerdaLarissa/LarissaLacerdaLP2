@@ -10,40 +10,41 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {
-          int N=Console.ReadLine();
-          Double [] qtd = new double [N];
+          int n = Console.ReadLine();
+          Double [] qtd = new double [n];
           
-          string [] Modelo = New string [N];
-          string Resultado, ClassificTemp, ClassificPot;
-          double [] KmRodado= new double [N];
-          double [] Potencia= new double [N];
+          string [] modelo = New string [n];
+          string  ClassVeic, ClassPot;
+          double [] km = new double [n];
+          double [] pot = new double [n];
           int i;
           
           for(i=0; i<N; i++)
           {
-            Modelo[i]=Console.ReadLine();
-            KmRodado [i]= double.Parse(C.RL());
-            Potencia [i]= double.Parse(C.RL());
-            if(KmRodado[i]<=5000)
-+           ClassificTemp="Novo";
+            modelo[i] = C.RL();
+            km [i] = double.Parse(C.RL());
+            pot [i] = double.Parse(C.RL());
+              
+            if(km[i] <= 5000)
++           ClassVeic="Novo";
 +          
-+           else if (KmRodado[i]>5000 && KmRodado[i]<=25000)
-+           ClassificTemp="Seminovo";
-+          
-+           else //(KmRodado[i]>25000)
-+           ClassificTemp="Velho";
-+          
-+           if (Potencia[i]<80)
-+           ClassificPot="Popular";
-+          
-+           else if(Potencia[i]>=80 && Potencia<170)
-+           ClassificPot"Médio";
++           else if (km[i] > 5000 && km[i] <= 25000)
++           ClassVeic="Seminovo";
 +          
 +           else
-+           ClassificPot="Potente";
++           ClassVeic="Velho";
++          
++           if (pot[i] < 80)
++           ClassPot="Popular";
++          
++           else if(pot[i] >= 80 && pot[i] < 170)
++           ClassPot"Médio";
++          
++           else
++           ClassPot="Potente";
           }
         
-            Console.writeLine("{0}-{1}-{2}",Modelo[i], ClassificTemp, ClassificPot);
+            Console.writeLine("{0 }- {1} - {2}",Modelo[i], ClassVeic, ClasscPot);
         }
     }
 }
