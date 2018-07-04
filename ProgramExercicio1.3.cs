@@ -11,8 +11,13 @@ namespace ConsoleApplication4
         static void Main(string[] args)
         {   
             int n = int.Parse(C.RL());
+            double km, pot;
+            
              for (int i = 0; i < n; i++)
              {
+                modelo= C.RL();
+                km = double.Parse(C.RL());
+                pot = double.Parse(C.RL());
                 C.WL(Classificar(car));
              }
         }
@@ -21,22 +26,22 @@ namespace ConsoleApplication4
             string ClassVeic;
             string ClassPot;
             
-            if (c.km <= 5000) 
-            ClassVeic = "Novo";
+            if (km <= 5000) 
+            ClassVeic="Novo";
                 
-            else if (c.km > 5000 && c.km <= 25000)
-            ClassVeic = "Seminovo";
+            else if (km > 5000 && km <= 25000)
+            ClassVeic="Seminovo";
                 
-            else//c.km > 25000
-            ClassVeic = "Velho";
+            else//km > 25000
+            ClassVeic="Velho";
                 
-            if (c.pot < 80)
-            ClassPot = "Popular";
+            if (pot < 80)
+            ClassPot="Popular";
                     
-            else if(c.pot >= 80 && c.pot < 170)
+            else if(pot >= 80 && pot < 170)
             ClassPot="Médio";
                 
-            else//c.pot > 170
+            else//pot > 170
             ClassPot="Potente";
           
             
