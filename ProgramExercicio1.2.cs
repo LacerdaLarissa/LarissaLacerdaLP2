@@ -10,43 +10,36 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {   
-            int n = int.Parse(Console.ReadLine());
-            string modelo;
-            double km;
-            double pot;
-            string classVeic = "";
-            string classPot = "" ;
+            int n = int.Parse(C.RL());
+            string modelo, ClassVeic= "", ClassPot= "";
+            double km, pot;
+             
             for(int i = 0; i < n; i++)
             {
-                modelo = Console.ReadLine();
-                km = double.Parse(Console.ReadLine());
-                pot = double.Parse(Console.ReadLine());
+                modelo = C.RL();
+                km = double.Parse(C.RL());
+                pot = double.Parse(C.RL());
             
-                if (km <= 5000)
-                {
-                    classVeic = "Novo";
-                }
+                if (km <= 5000) 
+                ClassVeic = "Novo";
+                
                 else if (km > 5000 && km <= 25000)
-                {
-                    classVeic = "Seminovo";
-                }
+                ClassVeic = "Seminovo";
+                
                 else
-                {
-                    classVeic = "Velho";
-                }
-                if (pot > 170)
-                {
-                    classPot = "Potente";
-                }
-                else if (pot >= 80 && pot <= 170)
-                {
-                    classPot = "Médio";
-                }
-                else
-                {
-                    classPot = "Popular";
-                }
-                Console.WriteLine("{0}-{1}-{2}\n", modelo, classVeic, classPot);
+                ClassVeic = "Velho";
+                
+                if (pot < 80)
+                ClassPot = "Popular
+                    
+                else if(pot >= 80 && pot < 170)
+                ClassPot="Médio";
+                
+                else//km > 170
+                ClassPot="Potente";
+          
+                
+                Console.WriteLine("{0}-{1}-{2}\n", modelo, ClassVeic, ClassPot);
             }
         }
     }
