@@ -21,16 +21,16 @@ namespace ConsoleApplication4
                 pot = double.Parse(C.RL());
             
                 if (km <= 5000) 
-                ClassVeic = "Novo";
+                ClassVeic="Novo";
                 
                 else if (km > 5000 && km <= 25000)
-                ClassVeic = "Seminovo";
+                ClassVeic="Seminovo";
                 
                 else
-                ClassVeic = "Velho";
+                ClassVeic="Velho";
                 
                 if (pot < 80)
-                ClassPot = "Popular
+                ClassPot = "Popular";
                     
                 else if(pot >= 80 && pot < 170)
                 ClassPot="Médio";
