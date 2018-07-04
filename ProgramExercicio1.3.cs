@@ -27,16 +27,16 @@ namespace ConsoleApplication4
             else if (c.km > 5000 && c.km <= 25000)
             ClassVeic = "Seminovo";
                 
-            else//km > 25000
+            else//c.km > 25000
             ClassVeic = "Velho";
                 
             if (c.pot < 80)
-            ClassPot = "Popular
+            ClassPot = "Popular";
                     
             else if(c.pot >= 80 && c.pot < 170)
             ClassPot="Médio";
                 
-            else//pot > 170
+            else//c.pot > 170
             ClassPot="Potente";
           
             
