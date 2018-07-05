@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,10 +12,7 @@ namespace ConsoleApplication2
         public int TotalAndares;
         public int Capacidade;
         public int PessoasPresentes;
-        
-        //if(Capacidade<PessoasPresentes)
-        //C.W("Sai");
-        
+                
         public void Entra( int X )
         {
             if (Capacidade>=PessoasPresentes+X);
@@ -32,9 +29,10 @@ namespace ConsoleApplication2
         {   
             
             if (AndarDesejado>=0 && AndarDesejado<=TotalAndares)
+            AndarAtual= AndarDesejado;
             //subir= AndarDesejado-AndarAtual;
             //descer= AndarAtual-AndarDesejado;
-            AndarAtual= AndarDesejado;
+            
         }
         
         public void Emergencia( )
