@@ -24,30 +24,30 @@ namespace ConsoleApplication4
                 Console.WriteLine(Classificar(car[i]));
             }
         }
-        static string Classificar(Carro c)
+        static string Classificar(Carro a)
         {
             string ClassVeic;
             string ClassPot;
             
-            if (c.km <= 5000) 
+            if (a.km <= 5000) 
             ClassVeic="Novo";
                 
-            else if (c.km > 5000 && c.km <= 25000)
+            else if (a.km > 5000 && a.km <= 25000)
             ClassVeic="Seminovo";
                 
             else//km > 25000
             ClassVeic="Velho";
                 
-            if (c.pot < 80)
+            if (a.pot < 80)
             ClassPot="Popular";
                     
-            else if(c.pot >= 80 && c.pot < 170)
+            else if(a.pot >= 80 && a.pot < 170)
             ClassPot="Médio";
                 
             else//pot > 170
             ClassPot="Potente";
             
-            return string.Format("{0} - {1} - {2}", c.modelo, ClassVeic, ClassPot);
+            return string.Format("{0} - {1} - {2}", a.modelo, ClassVeic, ClassPot);
         }
     }
 }
