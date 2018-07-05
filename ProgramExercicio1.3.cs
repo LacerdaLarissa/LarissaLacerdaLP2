@@ -45,7 +45,7 @@ namespace ConsoleApplication4
             ClassPot="Potente";
           
             
-            return string.Format("{0} - {1} - {2}", c.modelo, ClassVeic, ClassPot);
+            return string.Format("{0} - {1} - {2}", modelo, ClassVeic, ClassPot);
         }
     }
 }
