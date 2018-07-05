@@ -148,44 +148,6 @@ namespace ConsoleApplication2
             date.dia = int.Parse(C.RL());
             date.mes = int.Parse(C.RL());
             date.ano = int.Parse(C.RL());
-            C.WL("");
-            C.WL("A data inserida é:");
-            C.WL(date.emTexto());
-            C.WL(date.porExtenso());
-            C.WL("");
-
-            int n;
-            string escolha;
-            C.Write("Deseja saber uma data anterior ou posteiror?");
-            escolha = C.ReadLine();
-
-            if(escolha == "anterior")
-            {
-                C.Write("Insira a quantidade de dias anteriores a data inserida: ");
-                n = int.Parse(Console.ReadLine());
-                C.WL("");
-
-                for (int i = 0; i < n; i++)
-                {
-                    date.diaAnterior();
-                }
-                C.WL("A data desejada é:");
-                C.WL(date.emTexto());
-                C.WL(date.porExtenso());
-            }
-            else
-            {
-                Console.Write("Insira a quantidade de dias após a data inserida: ");
-                n = int.Parse(C.RL());
-                C.WL("");
-
-                for (int i = 0; i < n; i++)
-                {
-                    date.diaSeguinte();
-                }
-                C.WL("A data desejada é:");
-                C.WL(date.emTexto());
-                C.WL(date.porExtenso());
-            }            
+           
     }
 }
