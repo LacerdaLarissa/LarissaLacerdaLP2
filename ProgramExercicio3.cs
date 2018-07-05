@@ -141,7 +141,6 @@ namespace ConsoleApplication2
          }
     }
 
-//prog
 
  Data date = new Data();
 
@@ -184,7 +183,7 @@ namespace ConsoleApplication2
                 {
                     date.diaSeguinte();
                 }
-                C.WL("A data deseja é:");
+                C.WL("A data desejada é:");
                 C.WL(date.emTexto());
                 C.WL(date.porExtenso());
             }            
