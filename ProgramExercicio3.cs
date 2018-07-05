@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication4
 {
+     
      class Data
     {
         public int dia;
         public int mes;
         public int ano;
-
+        
         public bool validar()
         {
             if((mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) && dia > 0 && dia <= 31)
@@ -25,9 +26,9 @@ namespace ConsoleApplication4
             
             else
             return false;
-
+            
         }
-
+          
         public string emTexto()
         {
                if(validar())
@@ -39,7 +40,7 @@ namespace ConsoleApplication4
                    return string.Format("Data inválida.");
                }
         } 
-
+               
         public string porExtenso()
         {
                 if(mes == 1)
@@ -79,7 +80,7 @@ namespace ConsoleApplication4
                 return string.Format("{0} de Dezembro de {1}", dia, ano);
                 
         }
-
+               
         public void diaSeguinte()
         {
                 if(mes == 12 && dia == 31)
@@ -137,7 +138,7 @@ namespace ConsoleApplication4
                     dia -= 1;
                 }
          }
-    }
+}
 
  //programateste
 
