@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication2
+namespace ConsoleApplication4
 {
-    class Datas
-    {
      class Data
     {
         public int dia;
@@ -141,6 +139,7 @@ namespace ConsoleApplication2
          }
     }
 
+ //programateste
 
  Data day = new Data();
 
@@ -148,19 +147,30 @@ namespace ConsoleApplication2
             day.dia = int.Parse(C.RL());
             day.mes = int.Parse(C.RL());
             day.ano = int.Parse(C.RL());
-            C.WL(day.emTexto());
-            C.WL(day.diaAnterior());
             
-            C.WL("Deseja avançar ou retornar alguma data?");
+            C.WL("Escolha uma opção: avançar ou retornar a data inserida");
             opcao = C.RL();
         
             if (opcao == "avancar")
             {
-                day.diaSeguinte();
+                C.WL("Insira a quantidade de dias que deseja avançar");
+                qtd= int.Parse(C.RL());
+                for (i=0; i<qtd; i++)
+                {
+                    day.diaSeguinte();
+                }
+                C.WL(day.emTexto());
+                C.WL(day.diaAnterior());
             }
             else
             {
-                day.diaAnterior();
+                C.WL("Insira a quantidade de dias que deseja retornar");
+                qtd= int.Parse(C.RL());
+                for (i=0; i<qtd; i++)
+                {
+                    day.diaAnterior();
+                }
+                C.WL(day.emTexto());
+                C.WL(day.diaAnterior());
             }
-    }
-}
+    
