@@ -142,12 +142,25 @@ namespace ConsoleApplication2
     }
 
 
- Data date = new Data();
+ Data day = new Data();
 
-            C.WL("Insira uma data: dia, mês e ano.");
-            date.dia = int.Parse(C.RL());
-            date.mes = int.Parse(C.RL());
-            date.ano = int.Parse(C.RL());
-           
+            C.WL("Insira uma data completa.");
+            day.dia = int.Parse(C.RL());
+            day.mes = int.Parse(C.RL());
+            day.ano = int.Parse(C.RL());
+            C.WL(day.emTexto());
+            C.WL(day.diaAnterior());
+            
+            C.WL("Deseja avançar ou retornar alguma data?");
+            opcao = C.RL();
+        
+            if (opcao == "avancar")
+            {
+                day.diaSeguinte();
+            }
+            else
+            {
+                day.diaAnterior();
+            }
     }
 }
