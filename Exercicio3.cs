@@ -157,7 +157,7 @@ namespace ConsoleApplication2
 
             int n;
             string escolha;
-            C.Write("Deseja saber uma data do anterior ou posteiror?");
+            C.Write("Deseja saber uma data anterior ou posteiror?");
             escolha = C.ReadLine();
 
             if(escolha == "anterior")
