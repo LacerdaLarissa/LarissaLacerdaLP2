@@ -1,0 +1,95 @@
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P3ClaudioBuccosIN205
+{
+
+    class livro
+    {
+        public int id { get; set; }
+        public string título { get; set; }
+        public string autor { get; set; }
+        public string editor { get; set; }
+        public int alugado { get; set; }
+
+        public override string ToString()
+        {
+            return "id: " + id + "Título: " + título + "Autor: " + autor + "Editor: " + "Alugado: " + alugado;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<livro> livros = new List<livro>(); 
+            SqlConnection conn = new SqlConnection("Data Source = LivrariaServer; Initial Catalog = Acervo; Integrated Security = SSPI");
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = @"Select * From livro where Alugado = 0;";
+
+            conn.Open();
+
+            SqlDataReader r = cmd.ExecuteReader();
+
+            if(r.HasRows)
+            {
+                while(r.Read())
+                {
+                    livro a = new livro();
+                    a.id = r.GetInt32(0);
+                    a.título = r.GetString(1);
+                    a.autor = r.GetString(2);
+                    a.editor = r.GetString(3);
+                    a.alugado = r.GetInt16(4);
+                    livros.Add(a);
+
+                }
+
+            }
+            foreach(livro a in livros)
+            {
+                Console.WriteLine("Livros:");
+                for(int i = 0; i < livros.Count; i++)
+                {
+                Console.WriteLine(livros[i]);
+                }
+
+            }
+
+            conn.Close();
+
+            //Segunda Parte.
+
+            livro b = new livro();
+            Console.Write("Id: ");
+            b.id = Int32.Parse(Console.ReadLine());
+ 
+            SqlConnection conexao = new SqlConnection("Data Source = LivrariaServer; Initial Catalog = Acervo; Integrated Security = SSPI");
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.CommandText = @"Update Livro set Alugado = 1 where Id = @id";
+
+            comando.Parameters.AddWithValue("@id", b.id);
+
+            conexao.Open();
+
+            int result = comando.ExecuteNonQuery();
+            
+            conexao.Close();
+
+            if(result > 0)
+            {
+                Console.Write("Operação sucedida.");
+            }
+            else
+            {
+                
+                Console.Write("Operação falha.");
+            }
+        }
+    }
+}
